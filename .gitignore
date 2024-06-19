@@ -3,6 +3,9 @@
 # dependencies
 node_modules/
 
+.env
+emulador.bat
+
 # Expo
 .expo/
 dist/
