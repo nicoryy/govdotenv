@@ -15,6 +15,7 @@ import {
 import { Feather } from "@expo/vector-icons";
 import { useState } from "react";
 import useKeyboardStatus from "../customHook/useKeyboardStatus ";
+import { userData } from "../data/user";
 
 export default function Login() {
   const [visible, setVisible] = useState(true);
@@ -43,9 +44,11 @@ export default function Login() {
 
     if (!secret) {
       return setSecretErr(true);
-    } else setSecretErr(false)
+    } else setSecretErr(false);
 
-    return Alert.alert("deu bom!", `nome: ${user} \npass: ${secret}`);
+    if (user === userData.user && secret === userData.password) {
+      return Alert.alert("foi sal");
+    } else return Alert.alert("ERROR");
   };
 
   return (
