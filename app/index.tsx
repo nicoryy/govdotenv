@@ -135,8 +135,8 @@ export default function Login() {
             </View>
           </View>
         </TouchableWithoutFeedback>
-        <StatusBar style="light" />
       </KeyboardAvoidingView>
+      <StatusBar style="light" />
     </View>
   );
 }
